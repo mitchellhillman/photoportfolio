@@ -1,0 +1,72 @@
+
+
+body {   
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: tomato;
+}
+
+.main {
+    display: flex;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 2rem 1rem;
+}
+
+.sidebar .logo {
+    margin: 0 0 1rem 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar h1 {
+    font-weight: 700;
+}
+
+.sidebar ul {
+    margin: 2rem 0;
+}
+
+.sidebar li {
+    margin: 0.5rem 0;
+}
+
+.copyright {
+    color: #bbb;
+    font-size: .75rem;
+    border-top: 1px solid #bbb;
+    padding: 0.5rem 0 0 0;
+    margin: 2rem;
+}
+
+
+.gallery {
+    --imgHeight: 24rem;
+}
+
+.gallery ul {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: calc(var(--imgHeight) * 0.16); */
+    gap:  calc(var(--imgHeight) * 0.1) calc(var(--imgHeight) * 0.16);
+}
+
+.gallery img {
+    display: block;
+    height: var(--imgHeight);
+    width: auto;
+}
