@@ -60,7 +60,7 @@ a:hover {
     color: #bbb;
     font-size: .75rem;
     border-top: 1px solid #bbb;
-    padding: 0.5rem 0 0 0;
+    padding: 0.5rem 0 2rem 0;
     margin: 2rem;
 }
 
@@ -69,7 +69,6 @@ a:hover {
     --thumbHeight: 24rem;
     --fullHeight: 60rem;
     position: relative;
-    height: 100%;
 }
 
 .gallery ul {
@@ -77,6 +76,11 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap:  calc(var(--thumbHeight) * 0.1) calc(var(--thumbHeight) * 0.16);
+}
+
+.gallery:has(.active) {
+    height: 100%;
+    overflow: hidden;
 }
 
 .gallery .active {
