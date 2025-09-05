@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Mitchell Hillman - Photo Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <a href="/"><img src="img/signature.png" class="logo" width="200" /></a>
+        <h1>Mitchell Hillman</h1>
+        <p>Photo Portfolio</p>
+
+        <ul>
+          {% for gallery in site.data.galleries %}
+          <li class="{% if gallery.url == page.url %}active{% endif %}">
+            <a href="{{ gallery.url }}">{{ gallery.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        {{content}}
+        <p class="copyright">&copy; Mitchell Hillman</p>
+      </div>
+    </div>
+
+    <script src="gallery.js"></script>
+  </body>
+</html>
