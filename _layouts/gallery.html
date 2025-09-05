@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="gallery" id="gallery">
+  <ul>
+    {% for file in site.static_files %} {% if file.path contains {{page.path}}
+    %}
+    <li>
+      <img src="{{ file.path }}" />
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>

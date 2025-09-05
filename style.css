@@ -102,3 +102,34 @@ a:hover {
     height: var(--thumbHeight);
     width: auto;
 }
+
+.about {
+    padding: 2rem;
+}
+
+.portraits {
+    display: flex;
+    width: 50%;
+    gap: 1rem;
+}
+.portraits li img {
+    display: block;
+    max-width: 400px;
+}
+
+.bio {
+    margin-top: 2rem;
+    width: 720px;
+}
+
+.bio p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.bio blockquote {
+    margin: 0 0 2rem 0;
+    border-left: 4px solid #ddd;
+    padding-left: 1rem;
+}

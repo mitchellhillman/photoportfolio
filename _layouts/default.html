@@ -20,7 +20,7 @@
         <p>Photo Portfolio</p>
 
         <ul>
-          {% for gallery in site.data.galleries %}
+          {% for gallery in site.data.nav-galleries %}
           <li class="{% if gallery.url == page.url %}active{% endif %}">
             <a href="{{ gallery.url }}">{{ gallery.title }}</a>
           </li>
@@ -29,7 +29,6 @@
 
         <ul>
           <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
 
