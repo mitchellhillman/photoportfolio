@@ -28,9 +28,14 @@ a:hover {
 }
 
 .sidebar .logo {
+    display: block;
+}
+
+.sidebar .logo img {
     margin: 0 0 1rem 0;
     max-width: 100%;
     box-sizing: border-box;
+    display: block;
 }
 
 .sidebar h1 {
@@ -129,7 +134,7 @@ a:hover {
 }
 .portraits li img {
     display: block;
-    max-width: 400px;
+    max-width: 100%;
 }
 
 .bio {
@@ -137,7 +142,8 @@ a:hover {
     width: 720px;
 }
 
-.bio p, .bio blockquote p {
+.bio p, 
+.bio blockquote p {
     margin: 1rem 0;
     font-size: 1rem;
     line-height: 1.5;
@@ -147,4 +153,81 @@ a:hover {
     margin: 0 0 2rem 0;
     border-left: 4px solid #ddd;
     padding-left: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .main {
+        display: block;
+    }
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .name {
+        display: flex;
+        gap: 1rem;
+        width: auto;
+        align-items: center;
+    }
+    .navs {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+         width: auto;
+     }
+    .sidebar ul {
+        display: flex;
+        margin: 0 0 0 0;
+        gap: 1rem;
+    }
+
+    .gallery {
+        width: auto;
+    }
+
+    .gallery ul {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .gallery:has(.active) {
+        height: auto;
+        overflow: visible;
+    }
+    .gallery .active {
+        position: static;
+        width: auto;
+        height: auto;
+        background: white;
+    }
+
+    .gallery .active img,
+    .gallery img {
+        width: auto;
+        height: auto;
+        max-height: var(--thumbHeight);
+        max-width: 100%;
+    }
+
+    .content {
+        min-width: 0;
+        width: auto;
+    }
+
+    .about {
+        padding: 1rem;
+    }
+
+    .copyright {
+        margin: 2rem 1rem;
+    }
+
+    .portraits {
+        width: 100%;
+    }
+
+    .bio {       
+        width: auto;
+    }
 }
