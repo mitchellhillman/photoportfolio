@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="gallery" id="gallery">
+<div class="gallery {% if page.mono %} mono {% endif %}" id="gallery">
   <ul>
     {% for file in site.static_files %} {% if file.path contains {{page.path}}
     %}
